@@ -10,8 +10,8 @@ import lombok.NoArgsConstructor;
 public class IngredientDTO {
     private int id;
     private String name;
-    private int protein;
-    private int carbs;
-    private int fat;
+    private double protein;
+    private double carbs;
+    private double fat;
     private int kcal;
 }

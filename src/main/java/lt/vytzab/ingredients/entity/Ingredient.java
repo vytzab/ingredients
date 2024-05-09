@@ -17,8 +17,8 @@ public class Ingredient {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String name;
-    private int protein;
-    private int carbs;
-    private int fat;
+    private double protein;
+    private double carbs;
+    private double fat;
     private int kcal;
 }
