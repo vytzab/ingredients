@@ -18,6 +18,7 @@ public class IngredientController {
 
     @PostMapping("/addIngredient")
     public ResponseEntity<IngredientDTO> addIngredient(@RequestBody IngredientDTO ingredientDTO) {
+        ingredientDTO.setImage(ingredientDTO.getName().replaceAll("\\s+","").toLowerCase());
         IngredientDTO savedIngredientDTO = ingredientService.addIngredient(ingredientDTO);
         return new ResponseEntity<>(savedIngredientDTO, HttpStatus.CREATED);
     }
